@@ -162,8 +162,8 @@ if __name__ == '__main__':
     resPath = "/home/yw4002/finalpj/T1data/"
     big = []
     for i in range(0, len(datasets)):
-        # if datasets[i] in big:
-        #     continue
+        if datasets[i] in big:
+            continue
         if not os.path.exists(resPath + datasets[i] + ".json"):
             profile(datasets[i])
         else:

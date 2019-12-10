@@ -1,14 +1,14 @@
 import os, json
 
 files = os.listdir("../T1data")
-ret = []
-err = 0
+ret = dict()
+ret["datasets"] = list()
 for file in files:
 
     with open('../T1data/'+file, 'r') as jsonFile:
         try:
             text = jsonFile.read()
-            ret.append(json.loads(text))
+            ret["datasets"].append(json.loads(text))
         except:
             pass
 
