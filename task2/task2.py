@@ -261,10 +261,10 @@ if __name__ == "__main__":
     print prediction statistics
     
     """
-    os.mkdir("./fuck_final_data")
+    os.mkdir("./final_data")
     list_output = dict()
     list_output['predicted_types'] = json_list
-    with open("./fuck_final_data/task2" + ".json", 'w') as f:
+    with open("./final_data/task2" + ".json", 'w') as f:
         json.dump(list_output, f, cls=JsonEncoder)
     print("total:\n", total)
     print("pre_dict:\n", pred_dict)
